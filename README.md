@@ -14,126 +14,115 @@
 <img src="https://img.shields.io/badge/java-007396?style=for-the-badge&logo=java&logoColor=white"> <img src="https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white"> <img src="https://img.shields.io/badge/oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white">
   <img src="https://img.shields.io/badge/apache tomcat-F8DC75?style=for-the-badge&logo=apachetomcat&logoColor=white">
 - Spring Data JPA
+- Querydsl
 - Spring Security
-- AWS(Light sail)
-- Apache Tomcat
-
-### Skills
-- Daum 주소 API
-- KakaoMap API
-- Full Calendar API(캘린더)
-- PostOne API(결제)
+- Thymeleaf
  
 ## 🔎내가 맡은 역할 - Front
 
-### 메인 페이지
+### 로그인 / 아이디,비밀번호 찾기
 
-- 사용자가 쉽게 카테고리에 접근 할 수 있도록 검색과 카테고리를 클릭하여 참가할수 있도록 구현
+- 사이트 내 ID로그인과, 소셜(카카오)로그인을 구현 하였습니다.
 
-### 그룹 참가 페이지 
+### 회원가입
 
-- 무료와 유료 모임을 구분하고, 6가지의 카테고리를 보고 모임을 선택할수 있도록 지원합니다
+- 사이트 내 회원가입과, 소셜(카카오) 간편 회원가입을 구현하였습니다.
 
-### 리뷰 페이지
+### 피부진단
 
-- 간편하게 모임의 장에 관하여 점수를 부여하고 관련된 내용을 작성할수 있음습니다
+- 저희가 지정한 질문을 통해 화장품을 추천하는 페이지 입니다.
 
-### 로그인 페이지
+### footer map APi
 
-- 회원가입을 통하여 로그인 할 수 있도록 되어있습니다.
-- BackEnd에서 받아온 JWT토큰을 local Storage에 담아 정보를 사용
+- 회사 위치기반으로 지도로 위치 정보 공유
 
 ### 관리자 페이지
 
-- 관리자가 간편하게 회원, 그룹, 사이트를 관리 할 수 있도록 되어있습니다.
-- 모집인원, 모집기간이 끝난 모임은 확인할 수 있도록 표시되어있습니다.
+- 상품, 회원, 취소/반품 관리하는 페이지 입니다.
 
 ## 🔍내가 맡은 역할 - Back
 
-### 로그인 
+### 로그인
 
-- 로그인시 Spring Security JWT 토큰을 이용하여 회원의 정보를 프론트로 전달하여 사용 할 수 있도록 구현합니다.
-- 로그인이 되어있지 않다면 모든 기능 사용 불가능
+- 프론트에서 넘어온 정보를 가지고 데이터베이스와 연결하여 기존의 정보가 있는지 확인을 하고 
+  정보가 있다면 로그인, 없다면 회원가입 페이지로 이동시키도록 구현합니다.
 
-### 그룹 참가
+### 아이디,비밀번호 찾기
 
-- 로그인한 사용자의 권한에 맞게 그룹 참가 합니다
-- 스케쥴 어노테이션을 사용하여 자정을 기준으로 당일 기준으로 30일 이전에 완료된 모임은 삭제합니다.
-- 참가했던 그룹은 로직을 통해서 확인하여 알려줍니다.
+- 프론트에서 넘어온 정보를 가지고 데이터베이스와 연결하여 기존의 정보가 있는지 확인을 하고
+  정보가 있다면 아이디는 전체 공개를 하여 정보를 알려주고,
+  비밀번호는 재설정 할 수 있도록 구현합니다.
 
+### 회원가입
 
-### 모임 상세보기 및 신청 취소
+- 정규식 표현을 사용하여 회원가입 할 수 있도록 구현합니다.
 
-- 사용자가 속한 모임에 대한 상세 정보를 제공하는 기능을 구현합니다.
-- 사용자가 모임에 신청하고 이를 취소할 수 있도록 유연한 모임 참여 관리를 제공합니다.
+### 피부진단
 
-### 내가 만든 모임 탈퇴
+- 아직 알고리즘을 공부 못하였을 때라 if문을 가지고 여러가지 질문의 공통된 답을 찾아
+  데이터베이스에 저장되어있는 화장품중에 일치하는것을 출력되도록 구현합니다.
 
-- 로그인한 사용자가 생성한 모임에서 탈퇴하는 기능을 구현합니다.
-- 사용자가 만든 모임에서 나갈 수 있도록 탈퇴 로직을 처리합니다.
+### footer map APi
 
-### 리뷰작성
+- 카카오톡 developer을 통하여 지정한 위치기반으로 지도에 표출되도록 표현
 
-- 모임기간이 끝난 모임에 한하여 모임장에 대한 리뷰 및 평가 점수를 줄수 있습니다.
-- 모임원들이 평가한 점수로 인하여 모임장의 평균 점수가 80점이 넘으면 유료모임을 개설 할 수 있도록 로직 구현되어있습니다.
-
-### 관리자 관리
-
-- 회원들의 정보를 삭제 할 수있으며, 평가점수와 권한을 수정 할 수 있습니다.
-- 개설되어있는 그룹에 한하여 그룹 삭제를 할 수 있습니다.
-- 관련된 사이트를 그룹 참가하기 페이지에 추가 할 수 있으며, 삭제도 가능합니다.
-
-### 계정 관련
-
-- 이름과 이메일을 통하여 아이디를 찾을 수 있으며, 아이디는 앞 4글자까지 공개됩니다.
-- 아이디, 이름, 이메일을 통하여 가입 당시 작성한 이메일로 임시비밀번호 발급합니다.
-
-
+### 관리자 페이지
+## CRUD 관련
+- 제품, 회원관리 기능인 추가, 수정, 삭제 등의 작업을 구현합니다.
+## 취소/반품
+- CURD로 삭제와 수정을 구현하여, 승인을 해주었을 경우 작성한 유저의 상태에서도 변하도록 구현하였습니다.
 
 ## :speaker: 프로젝트 주요 기능 
 
 ### Main
-- 각 카테고리에 맞는 그룹리스트 이동
-- 카테고리에 해당되는 그룹 검색
+- 등록 기준 최신순으로 상품을 보여줍니다.
+- 리뷰점수 기준으로하여 최신순으로 리뷰를 보여줍니다.
 ### 계정 관련
 - 회원가입, 로그인, 로그아웃
-- 아이디 찾기
-- 임시 비밀번호 발급(이메일 발송)
+- 아이디, 비밀번호 찾기
 - 개인 정보 수정
-### 그룹 개설
-- 권한에 따른 그룹 개설(유료 or 무료)
-### 그룹 참가
-- 카테고리에 맞는 그룹 검색
-- 그룹 신청(유료모임 신청시 결제페이지 이동)
+### 전제품
+- 등록된 상품을 볼 수 있으며, 구매/장바구니 담기
+### TEST
+- 6가지의 질문에 답변을 하여 화장품 추천
 ### 리뷰 
-- 리뷰 검색 및 작성
-### 일정 관리 
-- 캘린더를 통한 일정 CRUD
-- 내가 가입한 모임 상세보기
-- 신청한 모임, 개설한 모임 탈퇴
+- 리뷰 작성, 검색, 수정 등
+### COMMUNITY
+## Q&A
+- 관리자와의 소통을 위한 게시판 CRUD
+## 자주하는 질문
+- 관리자가 지정해놓은 top10 질문
+## 취소/반품
+- 구매한 제품을 취소/반품 신청 및 내역 확인
 ### 관리자 페이지
-- 모든 회원에 관한 수정과 삭제 가능
-- 그룹 삭제 및 사이트 추가
+- 회원,상품,취소/반품 수정, 추가, 삭제
 
 ## 💻화면
-- 그룹개설<br>
+- 전제품<br>
+![semi1](https://github.com/juseungBaek/first-project/assets/151498425/db314677-62ae-468e-890f-9fbf8ea97cfb)
+![semi2](https://github.com/juseungBaek/first-project/assets/151498425/e2d0dc31-8cf5-4d39-9d02-c5c189bfe1fc)
 
-![20240303_162936](https://github.com/alsrl2275/alsrl2275/assets/142866976/99e24c14-6bb8-4b94-829a-a8abccaf8132)
-![20240303_163722](https://github.com/alsrl2275/alsrl2275/assets/142866976/4ddc9d7e-788f-4d1c-aaef-9ef768167182)<br>
+- TEST<br>
+![semi1](https://github.com/juseungBaek/first-project/assets/151498425/8f8c15d4-cdfb-4417-8480-ac8488c9d43f)
+![semi1](https://github.com/juseungBaek/first-project/assets/151498425/7bcba29f-3e93-4827-9f59-4ac812d430f4)
 
-- 일정관리<br>
+- REVIEW <br>
+![semi1](https://github.com/juseungBaek/first-project/assets/151498425/4b616d39-470b-4b23-870b-9aa4fb5e5703)
+![semi1](https://github.com/juseungBaek/first-project/assets/151498425/4badcecc-7571-441d-9171-7193500fdd79)
 
-![20240303_163409](https://github.com/alsrl2275/alsrl2275/assets/142866976/3552dc58-c310-4959-9937-92a034f19d68)<br>
+- COMMUNITY <br>
+![semi1](https://github.com/juseungBaek/first-project/assets/151498425/505d318a-23c5-49e7-8b64-f7f37b4387c8)
+![semi1](https://github.com/juseungBaek/first-project/assets/151498425/8a4eb36d-e3e3-48ff-b69c-57e1a6cad8fc)
+![semi1](https://github.com/juseungBaek/first-project/assets/151498425/5adf5cee-7b2a-4cd7-9ca9-d10619fc8b3b)
 
-![20240303_163427](https://github.com/alsrl2275/alsrl2275/assets/142866976/3927c3cf-e75c-4322-8f27-7664654331ae)<br>
+- 관리자<br>
+![semi1](https://github.com/juseungBaek/first-project/assets/151498425/0911c0f9-4052-461f-ae14-844c89f4dd28)
+![semi1](https://github.com/juseungBaek/first-project/assets/151498425/0064ecf3-1c79-49ca-bf90-2ce60619d533)
+![semi1](https://github.com/juseungBaek/first-project/assets/151498425/10016a52-88c0-4547-a937-febc3a50538a)
+![semi1](https://github.com/juseungBaek/first-project/assets/151498425/76584730-2eec-4f24-92fc-836bcd10237e)
 
-![20240303_164230](https://github.com/alsrl2275/alsrl2275/assets/142866976/26110683-011d-4f18-9b65-aba945376ca5)<br>
 
-![20240303_164307](https://github.com/alsrl2275/alsrl2275/assets/142866976/7994dd10-e34d-4aed-becc-74d942f1dff4)<br>
 
-![20240303_164324](https://github.com/alsrl2275/alsrl2275/assets/142866976/2740c261-7839-4b78-913e-f99bfb7fc6f1)
 
-- 유로모임 신청 시 결제화면 <br>
 
-![20240303_164619](https://github.com/alsrl2275/alsrl2275/assets/142866976/ea011d62-484b-4d91-a35a-628eed49ef8e)
 

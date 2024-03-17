@@ -1,5 +1,5 @@
 # 📜 B1L3-First-Project
-> 화장품에 대해 잘 모르느 사람들을 위해 피부진단을 통해 화장품 추천을 하여 남녀노소 화장품 구매에 편리함을 느끼도록 개발
+> 화장품에 대해 잘 모르는 사람들을 위해 피부진단을 통해 화장품 추천을 하여 남녀노소 화장품 구매에 편리함을 느끼도록 개발
 <br>개발 기간 : 2024.01.22 ~ 02.20
 > <br>개발 인원 : 4명
 <br>
@@ -7,8 +7,9 @@
 ## :books: 기술 스택
 ### 프론트엔드
   <img src="https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white">  <img src="https://img.shields.io/badge/css3-1572B6?style=for-the-badge&logo=css3&logoColor=white">
-  <img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white"> <img src="https://img.shields.io/badge/JQUERY-61DAFB?style=for-the-badge&logo=react&logoColor=black">
-  <img src="https://img.shields.io/badge/BOOTSTRAP-339933?style=for-the-badge&logo=Node.js&logoColor=white">
+  <img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white"> <img src="https://img.shields.io/badge/jquery-0769AD?style=for-the-badge&logo=jquery&logoColor=white">
+  <img src="https://img.shields.io/badge/bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white">
+  <img src="https://img.shields.io/badge/thymeleaf-005F0F?style=for-the-badge&logo=bootstrap&logoColor=white">
 ### 백엔드  
 <img src="https://img.shields.io/badge/java-007396?style=for-the-badge&logo=java&logoColor=white"> <img src="https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white"> <img src="https://img.shields.io/badge/oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white">
  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white">
